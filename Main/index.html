@@ -1,39 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Caculadora</title>
+    <link rel="shortcut icon" href="../imagens/calculadora.png" type="image/x-icon">
+    <script src="Scripts/script.js"></script>
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/Media_Query.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="calculator">
-          <div class="calculator__display">0</div>
-          <div class="calculator__keys">
-            <button class="key--operator" data-action="factorial">!</button>
-            <button class="key--operator" data-action="square root">&radic;</button>
-            <button data-action="clear">AC</button>
-            <button class="key--operator" data-action="add">+</button>
+    <main id="calculator">
+        <div id="calculator_display">
+            0
+        </div>
+        <div id="calculator_keys">
+            <button class="key_operator">+</button>
+            <button class="key_operator">-</button>
+            <button class="key_operator">&times;</button>
+            <button class="key_operator">÷</button>
             <button>7</button>
             <button>8</button>
             <button>9</button>
-            <button class="key--operator" data-action="subtract">-</button>
+            <button class="key_operator" id="id_operator_1">**</button>
             <button>4</button>
             <button>5</button>
             <button>6</button>
-            <button class="key--operator" data-action="multiply">&times;</button>
+            <button class="key_operator" id="id_operator_2">!</button>
             <button>1</button>
             <button>2</button>
             <button>3</button>
-            <button class="key--operator" data-action="divide">÷</button>
-            <button class="key--operator" data-action="power">x<sup>2</sup></button>
+            <button class="key_operator" id="id_operator_3">%</button>
+            <button data-action="decimal" id="decimal">.</button>
             <button>0</button>
-            <button data-action="decimal">.</button>    
-            <button class="key--equal" data-action="calculate">=</button>
-          </div>
+            <button data-action="clear">AC</button>
+            <button id="key_equal" data-action="calculate">=</button>
         </div>
-      </div>
+    </main>
 </body>
+
 </html>

@@ -1,0 +1,23 @@
+@media screen and (min-width: 780px) {
+    main#calculator {   
+        width: 80vw;
+    }
+
+    div#calculator_keys {
+        grid-template-columns: repeat(4, 1fr);
+    } 
+    
+    button {
+        height: 74px;
+    }
+    #key_equal {
+        background-image: linear-gradient(to bottom, #fe886a, #ff7033);
+        grid-column: 4;
+        grid-row: 5;
+        height: 74px;
+    }
+
+    #id_operator_1, #id_operator_2, #id_operator_3 {
+        display: block;
+    }
+}
