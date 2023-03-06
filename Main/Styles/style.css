@@ -1,3 +1,12 @@
+:root {
+    --fonte: #90a8e0;
+    --cor1: #293041;
+    --cor2: #313A4E;
+    --cor3: #414d67;
+    --cor4: #202633;
+    --equal: #59698D;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -14,28 +23,39 @@ main#calculator {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -70%);
-    background-color: pink;
+    background-color: var(--cor1);
     width: 400px;
     height: 350px;
     border-radius: 15px;
-    box-shadow: 0px 2.5px 2px 0px rgba(0, 0, 0, 0.612);
+    box-shadow: 0px 2.5px 2px 0px rgb(0, 0, 0);
     transition: width .05s, height .05s;
     transition-timing-function: ease;
 }
 
+div#operations {
+    background-color: var(--cor4);
+    color: var(--fonte);
+    height: 100px;
+    text-align: right;
+    border-radius: 10px 10px 0px 0px;
+}
+
+div#previous_operation {
+    padding: 15px 5px 0px 0px;
+}
+
 
 div#calculator_display {
-    background-color: gray;
-    color: aqua;
+    background-color: var(--cor4);
+    color: var(--fonte);
     font: normal 39px 'Arial';
-    height: 40px;
-    padding: 20px;
+    padding-top: 20px;
     text-align: right;
     border-radius: 10px 10px 0px 0px ;
 }
 
-div#calculator_keys{
-    background-color: red;
+div#calculator__keys{
+    background-color: var(--cor1);
     display: grid;
     grid-gap: 1px;
     grid-template-columns: repeat(4, 1fr);
@@ -44,9 +64,12 @@ div#calculator_keys{
 
 button {
     font: normal 23px Arial;
+    background-color: var(--cor2);
+    color: var(--fonte);
     border-radius: 0;
     border: 0;
     height: 74px;
+    cursor: pointer;
 }
 
 #decimal {
@@ -54,18 +77,16 @@ button {
 }
 
 #key_equal {
-    background-image: linear-gradient(to bottom, #fe886a, #ff7033);
+    background-image: linear-gradient(to bottom, var(--equal), #515d79);
     grid-column: -2;
     grid-row: 2 / span 4;
     height: 299px;
     border-radius: 0px 0px 10px 0px;
 }
 
-.key_operator {
-    background-color: aqua;
-}
 #key_equal:hover, button:hover {
-    border: 1px solid red;
+    background-color: var(--cor3);
+    border: 2px solid var(--cor1);
     transform: translate(-1px, -1px);
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.661);
     transition: transform .2s, border 1s;

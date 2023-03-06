@@ -6,40 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caculadora</title>
-    <link rel="shortcut icon" href="../imagens/calculadora.png" type="image/x-icon">
-    <script src="Scripts/script.js"></script>
+    <link rel="shortcut icon" href="imagens/calculadora.png" type="image/x-icon">
     <link rel="stylesheet" href="Styles/style.css">
     <link rel="stylesheet" href="Styles/Media_Query.css">
 </head>
 
 <body>
     <main id="calculator">
-        <div id="calculator_display">
-            0
+        <div id="operations">
+            <div id="previous_operation"></div>        
+            <div id="calculator_display"></div>
         </div>
-        <div id="calculator_keys">
-            <button class="key_operator">+</button>
-            <button class="key_operator">-</button>
-            <button class="key_operator">&times;</button>
-            <button class="key_operator">÷</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button class="key_operator" id="id_operator_1">**</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button class="key_operator" id="id_operator_2">!</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button class="key_operator" id="id_operator_3">%</button>
-            <button data-action="decimal" id="decimal">.</button>
+        <div id="calculator__keys">
+            <button>+</button>
+            <button>-</button>
+            <button>*</button>
+            <button>÷</button>
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+            <button id="id_operator_1">**</button>
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <button id="id_operator_2">%</button>
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button id="id_operator_3">DEL</button>
+            <button id="decimal">.</button>
             <button>0</button>
-            <button data-action="clear">AC</button>
-            <button id="key_equal" data-action="calculate">=</button>
+            <button>AC</button>
+            <button id="key_equal">=</button>
         </div>
     </main>
+    <script src="Scripts/script.js"></script>
 </body>
 
 </html>
