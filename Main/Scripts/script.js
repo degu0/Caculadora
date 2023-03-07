@@ -46,21 +46,13 @@ class Calculator {
         operationValue = previous - current;
         this.updateScreen(operationValue, operation, current, previous);
         break;
-      case "*":
+      case "×":
         operationValue = previous * current;
         this.updateScreen(operationValue, operation, current, previous);
         break;
       case "÷":
         operationValue = previous / current;
         this.updateScreen(operationValue, operation, current, previous);
-        break;
-      case "**":
-        operationValue = previous ** current;
-        this.updateScreen(operationValue, operation, previous, current);
-        break;
-      case "%":
-        operationValue = previous % current;
-        this.updateScreen(operationValue, operation, previous, current);
         break;
       case "DEL":
         this.processDelOperator();
@@ -99,7 +91,7 @@ class Calculator {
 
   // Change math operation
   changeOperation(operation) {
-    const mathOperations = ["*", "-", "+", "÷", "**", "%"];
+    const mathOperations = ["×", "-", "+", "÷"];
 
     if (!mathOperations.includes(operation)) {
       return;
@@ -136,7 +128,6 @@ buttons.forEach((btn) => {
     const value = e.target.innerText;
 
     if (+value >= 0 || value === ".") {
-      console.log(value);
       calc.addDigit(value);
     } else {
       calc.processOperation(value);

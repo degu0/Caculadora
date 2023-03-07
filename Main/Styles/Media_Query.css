@@ -1,22 +1,32 @@
 @media screen and (min-width: 780px) {
+
+    
+
     main#calculator {   
-        width: 80vw;
+        width: 60vw;
+        height: 86vh;
     }
 
-    div.calculator__keys {
-        grid-template-columns: repeat(4, 1fr);
+    div#calculator__keys {
+        grid-template-columns: repeat(3, 1fr);
     } 
     
     button {
         height: 74px;
     }
+    #key_ac {
+        grid-column: 3;
+        grid-row: 2;
+    }
     #key_equal {
-        grid-column: 4;
-        grid-row: 5;
+        grid-column: 3;
+        grid-row: 6 /  6;
         height: 74px;
     }
 
-    #id_operator_1, #id_operator_2, #id_operator_3 {
+    #key_del {
         display: block;
+        grid-column: 2;
+        grid-row: 2;
     }
 }
